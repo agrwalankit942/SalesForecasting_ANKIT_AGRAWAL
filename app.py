@@ -5,6 +5,22 @@ Author : Ankit Agrawal
 ===========================================================
 """
 
+# -------------------------------------------------------------
+# THREAD / OPENMP SAFETY
+# -------------------------------------------------------------
+# Prophet (via cmdstanpy) and XGBoost both ship their own vendored
+# OpenMP runtime. Loading two different OpenMP runtimes into the
+# same process is a well known cause of native (non-Python)
+# crashes such as "Segmentation fault" on constrained containers
+# like Streamlit Community Cloud. Pinning thread counts to 1 and
+# allowing duplicate runtimes to coexist avoids that class of crash.
+# These MUST be set before numpy / xgboost / prophet are imported.
+import os
+os.environ.setdefault("KMP_DUPLICATE_LIB_OK", "TRUE")
+os.environ.setdefault("OMP_NUM_THREADS", "1")
+os.environ.setdefault("OPENBLAS_NUM_THREADS", "1")
+os.environ.setdefault("MKL_NUM_THREADS", "1")
+
 import warnings
 warnings.filterwarnings("ignore")
 
@@ -17,10 +33,17 @@ import plotly.graph_objects as go
 
 import streamlit as st # type: ignore
 
-from prophet import Prophet
-from sklearn.ensemble import IsolationForest
 from sklearn.metrics import mean_absolute_error, mean_squared_error
-from xgboost import XGBRegressor
+
+# NOTE: Prophet, XGBRegressor and IsolationForest are intentionally
+# imported lazily (inside the functions/pages that use them) instead
+# of at the top of the module. Prophet's import pulls in cmdstanpy,
+# which is one of the heaviest and most crash-prone imports in this
+# stack on Streamlit Cloud's memory-limited containers. Importing it
+# only when the user actually opens "Forecast Explorer" or "Anomaly
+# Report" keeps the app's default landing page (Sales Overview)
+# lightweight and avoids paying that cost - and that risk - on
+# every single run.
 
 # -------------------------------------------------------------
 # PAGE CONFIG
@@ -44,6 +67,9 @@ SEGMENT_PATH = "Product_Demand_Segments.csv"
 @st.cache_data
 def load_data():
 
+    if not os.path.exists(DATA_PATH):
+        return None
+
     df = pd.read_csv(DATA_PATH)
 
     df["Order Date"] = pd.to_datetime(df["Order Date"])
@@ -57,41 +83,40 @@ def load_data():
 @st.cache_data
 def load_segments():
 
+    if not os.path.exists(SEGMENT_PATH):
+        return pd.DataFrame()
+
     return pd.read_csv(SEGMENT_PATH)
 
 
 df = load_data()
 segments_df = load_segments()
 
+if df is None:
+    st.error(
+        f"⚠️ Required data file '{DATA_PATH}' was not found in the "
+        "repository. Please make sure it is committed alongside app.py."
+    )
+    st.stop()
+
 # -------------------------------------------------------------
 # LOAD OTHER MODELS
-# Prophet model is NOT loaded intentionally.
-# This removes the stan_backend deployment error.
 # -------------------------------------------------------------
-@st.cache_resource
-def load_models():
-
-    models = {}
-
-    try:
-        models["kmeans"] = joblib.load("kmeans_model.pkl")
-    except:
-        models["kmeans"] = None
-
-    try:
-        models["pca"] = joblib.load("pca_model.pkl")
-    except:
-        models["pca"] = None
-
-    try:
-        models["scaler"] = joblib.load("scaler.pkl")
-    except:
-        models["scaler"] = None
-
-    return models
-
-
-models = load_models()
+# NOTE: kmeans_model.pkl / pca_model.pkl / scaler.pkl were being
+# unpickled here via joblib.load() at every app startup, but the
+# resulting objects were never referenced anywhere else in this
+# file (the Product Demand Segments page reads the pre-computed
+# Product_Demand_Segments.csv instead). Unpickling sklearn/numpy
+# objects that were trained with a different numpy/scikit-learn/
+# joblib version than what's pinned in requirements.txt is a
+# common cause of a hard, non-Python-catchable crash (segfault)
+# during unpickling. Since these objects were unused dead weight,
+# the loading has been removed rather than risk that crash.
+#
+# If you need these models again later, re-export them with
+# joblib using the exact scikit-learn/numpy versions pinned in
+# requirements.txt, then reintroduce a *lazy* loader (called only
+# from the page that needs it) wrapped in try/except.
 
 # -------------------------------------------------------------
 # HELPER CONSTANTS
@@ -198,6 +223,14 @@ def prophet_forecast(monthly,
 
         return None
 
+    # Lazy import: keeps Prophet/cmdstanpy out of the process unless
+    # this function actually runs (see note at top of file).
+    try:
+        from prophet import Prophet
+    except Exception as e:
+        st.warning(f"Prophet is unavailable in this environment: {e}")
+        return None
+
     train = monthly.iloc[:-periods]
 
     test = monthly.iloc[-periods:]
@@ -280,6 +313,9 @@ def prophet_forecast(monthly,
 def xgb_forecast(monthly,
                  periods=3):
 
+    # Lazy import: see note at top of file.
+    from xgboost import XGBRegressor
+
     feat = create_features(monthly)
 
     if len(feat) < 8:
@@ -303,7 +339,8 @@ def xgb_forecast(monthly,
         n_estimators=200,
         learning_rate=0.05,
         max_depth=3,
-        random_state=42
+        random_state=42,
+        n_jobs=1
 
     )
 
@@ -339,7 +376,8 @@ def xgb_forecast(monthly,
         n_estimators=200,
         learning_rate=0.05,
         max_depth=3,
-        random_state=42
+        random_state=42,
+        n_jobs=1
 
     )
 
@@ -1441,11 +1479,16 @@ Identify unusual spikes and drops in sales using
     # TRAIN ISOLATION FOREST
     # ----------------------------------------------------------
 
+    # Lazy import: see note at top of file.
+    from sklearn.ensemble import IsolationForest
+
     model = IsolationForest(
 
         contamination=0.05,
 
-        random_state=42
+        random_state=42,
+
+        n_jobs=1
 
     )
 
