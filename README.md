@@ -169,6 +169,21 @@ Models are evaluated using:
 The best-performing model is selected based on these evaluation metrics.
 
 ---
+<img width="1520" height="525" alt="image" src="https://github.com/user-attachments/assets/b8a76a62-efbe-49f2-a4ad-5423a8658fe4" />
+
+<img width="1547" height="552" alt="image" src="https://github.com/user-attachments/assets/e5552598-b1fe-429c-b046-33b04a04c512" />
+
+<img width="1528" height="672" alt="image" src="https://github.com/user-attachments/assets/a965f563-5a83-46e2-a89a-f9ad2f5b7edd" />
+
+<img width="1126" height="578" alt="image" src="https://github.com/user-attachments/assets/93d9c19b-63ab-4946-ba63-9888c6245c1a" />
+
+<img width="1297" height="598" alt="image" src="https://github.com/user-attachments/assets/f816ea38-3f45-45ad-a49b-12892544e7fe" />
+
+
+
+
+
+
 
 # 📦 Product Demand Segments
 
