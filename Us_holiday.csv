@@ -1,0 +1,146 @@
+,Name,Date,Public,Country,Weekday,Observed_day
+0,New Year's Day,2022-01-01,True,US,Saturday,Friday
+1,Seventh Day of Kwanzaa,2022-01-01,False,US,Saturday,Saturday
+2,Epiphany,2022-01-06,False,US,Thursday,Thursday
+3,Orthodox Christmas Eve,2022-01-06,False,US,Thursday,Thursday
+4,Orthodox Christmas Day,2022-01-07,False,US,Friday,Friday
+5,Stephen Foster Memorial Day,2022-01-13,False,US,Thursday,Thursday
+6,Orthodox New Year's Day,2022-01-14,False,US,Friday,Friday
+7,Martin Luther King Jr. Day,2022-01-17,True,US,Monday,Monday
+8,Chinese New Year's Day,2022-02-01,False,US,Tuesday,Tuesday
+9,National Freedom Day,2022-02-01,False,US,Tuesday,Tuesday
+10,Groundhog Day,2022-02-02,False,US,Wednesday,Wednesday
+11,National Wear Red Day,2022-02-04,False,US,Friday,Friday
+12,Super Bowl Sunday,2022-02-06,False,US,Sunday,Sunday
+13,Valentine's Day,2022-02-14,False,US,Monday,Monday
+14,George Washington's Birthday,2022-02-21,True,US,Monday,Monday
+15,NHL Trade Deadline,2022-02-28,False,US,Monday,Monday
+16,Saint David's Day,2022-03-01,False,US,Tuesday,Tuesday
+17,Shrove Tuesday,2022-03-01,False,US,Tuesday,Tuesday
+18,Ash Wednesday,2022-03-02,False,US,Wednesday,Wednesday
+19,Read Across America Day,2022-03-02,False,US,Wednesday,Wednesday
+20,Employee Appreciation Day,2022-03-04,False,US,Friday,Friday
+21,Start of Daylight Saving Time,2022-03-13,False,US,Sunday,Sunday
+22,Saint Patrick's Day,2022-03-17,False,US,Thursday,Thursday
+23,March Equinox,2022-03-20,False,US,Sunday,Sunday
+24,National Vietnam War Veterans Day,2022-03-29,False,US,Tuesday,Tuesday
+25,April Fools' Day,2022-04-01,False,US,Friday,Friday
+26,National Tartan Day,2022-04-06,False,US,Wednesday,Wednesday
+27,Palm Sunday,2022-04-10,False,US,Sunday,Sunday
+28,Thomas Jefferson's Birthday,2022-04-13,False,US,Wednesday,Wednesday
+29,Maundy Thursday,2022-04-14,False,US,Thursday,Thursday
+30,Good Friday,2022-04-15,False,US,Friday,Friday
+31,Holy Saturday,2022-04-16,False,US,Saturday,Saturday
+32,Easter,2022-04-17,False,US,Sunday,Sunday
+33,Tax Day,2022-04-15,False,US,Friday,Monday
+34,Boston Marathon,2022-04-18,False,US,Monday,Monday
+35,Easter Monday,2022-04-18,False,US,Monday,Monday
+36,Earth Day,2022-04-22,False,US,Friday,Friday
+37,Orthodox Good Friday,2022-04-22,False,US,Friday,Friday
+38,Orthodox Holy Saturday,2022-04-23,False,US,Saturday,Saturday
+39,Orthodox Easter,2022-04-24,False,US,Sunday,Sunday
+40,Orthodox Easter Monday,2022-04-25,False,US,Monday,Monday
+41,Administrative Professionals Day,2022-04-27,False,US,Wednesday,Wednesday
+42,Take our Daughters and Sons to Work Day,2022-04-28,False,US,Thursday,Thursday
+43,National Arbor Day,2022-04-29,False,US,Friday,Friday
+44,Law Day,2022-05-01,False,US,Sunday,Sunday
+45,Loyalty Day,2022-05-01,False,US,Sunday,Sunday
+46,Star Wars Day,2022-05-04,False,US,Wednesday,Wednesday
+47,Cinco de Mayo,2022-05-05,False,US,Thursday,Thursday
+48,National Day of Prayer,2022-05-05,False,US,Thursday,Thursday
+49,Kentucky Oaks,2022-05-06,False,US,Friday,Friday
+50,Military Spouse Appreciation Day,2022-05-06,False,US,Friday,Friday
+51,National Nurses Day,2022-05-06,False,US,Friday,Friday
+52,Kentucky Derby,2022-05-07,False,US,Saturday,Saturday
+53,National Explosive Ordnance Disposal (EOD) Day,2022-05-07,False,US,Saturday,Saturday
+54,Mother's Day,2022-05-08,False,US,Sunday,Sunday
+55,Victory in Europe Day,2022-05-08,False,US,Sunday,Sunday
+56,Peace Officers Memorial Day,2022-05-15,False,US,Sunday,Sunday
+57,National Defense Transportation Day,2022-05-20,False,US,Friday,Friday
+58,Armed Forces Day,2022-05-21,False,US,Saturday,Saturday
+59,Preakness Stakes,2022-05-21,False,US,Saturday,Saturday
+60,National Maritime Day,2022-05-22,False,US,Sunday,Sunday
+61,Emergency Medical Services for Children Day,2022-05-25,False,US,Wednesday,Wednesday
+62,National Missing Children's Day,2022-05-25,False,US,Wednesday,Wednesday
+63,Feast of the Ascension of Jesus Christ,2022-05-26,False,US,Thursday,Thursday
+64,Memorial Day,2022-05-30,True,US,Monday,Monday
+65,Pentecost,2022-06-05,False,US,Sunday,Sunday
+66,D-Day,2022-06-06,False,US,Monday,Monday
+67,Pentecost Monday,2022-06-06,False,US,Monday,Monday
+68,Trinity Sunday,2022-06-12,False,US,Sunday,Sunday
+69,Army Birthday,2022-06-14,False,US,Tuesday,Tuesday
+70,Flag Day,2022-06-14,False,US,Tuesday,Tuesday
+71,Feast of Corpus Christi,2022-06-16,False,US,Thursday,Thursday
+72,Father's Day,2022-06-19,False,US,Sunday,Sunday
+73,Juneteenth National Independence Day,2022-06-19,True,US,Sunday,Monday
+74,American Eagle Day,2022-06-20,False,US,Monday,Monday
+75,June Solstice,2022-06-21,False,US,Tuesday,Tuesday
+76,Helen Keller Day,2022-06-27,False,US,Monday,Monday
+77,Independence Day,2022-07-04,True,US,Monday,Monday
+78,Bastille Day,2022-07-14,False,US,Thursday,Thursday
+79,Parents' Day,2022-07-24,False,US,Sunday,Sunday
+80,National Korean War Veterans Armistice Day,2022-07-27,False,US,Wednesday,Wednesday
+81,Coast Guard Birthday,2022-08-04,False,US,Thursday,Thursday
+82,Purple Heart Day,2022-08-07,False,US,Sunday,Sunday
+83,Assumption of Mary,2022-08-15,False,US,Monday,Monday
+84,National Aviation Day,2022-08-19,False,US,Friday,Friday
+85,Senior Citizens Day,2022-08-21,False,US,Sunday,Sunday
+86,Women's Equality Day,2022-08-26,False,US,Friday,Friday
+87,Labor Day,2022-09-05,True,US,Monday,Monday
+88,Carl Garner Federal Lands Cleanup Day,2022-09-10,False,US,Saturday,Saturday
+89,National Grandparent's Day,2022-09-11,False,US,Sunday,Sunday
+90,Patriot Day,2022-09-11,False,US,Sunday,Sunday
+91,National POW/MIA Recognition Day,2022-09-16,False,US,Friday,Friday
+92,Citizenship Day,2022-09-17,False,US,Saturday,Friday
+93,National CleanUp Day,2022-09-17,False,US,Saturday,Saturday
+94,Air Force Birthday,2022-09-18,False,US,Sunday,Sunday
+95,September Equinox,2022-09-23,False,US,Friday,Friday
+96,Gold Star Mother's Day,2022-09-25,False,US,Sunday,Sunday
+97,Rosh Hashanah,2022-09-26,False,US,Monday,Monday
+98,Child Health Day,2022-10-03,False,US,Monday,Monday
+99,Feast of Saint Francis Assisi,2022-10-04,False,US,Tuesday,Tuesday
+100,Yom Kippur,2022-10-05,False,US,Wednesday,Wednesday
+101,German-American Day,2022-10-06,False,US,Thursday,Thursday
+102,Leif Erikson Day,2022-10-09,False,US,Sunday,Sunday
+103,Columbus Day,2022-10-10,True,US,Monday,Monday
+104,Navy Birthday,2022-10-13,False,US,Thursday,Thursday
+105,White Cane Safety Day,2022-10-15,False,US,Saturday,Saturday
+106,Boss's Day,2022-10-16,False,US,Sunday,Monday
+107,Halloween,2022-10-31,False,US,Monday,Monday
+108,All Saints' Day,2022-11-01,False,US,Tuesday,Tuesday
+109,All Souls' Day,2022-11-02,False,US,Wednesday,Wednesday
+110,End of Daylight Saving Time,2022-11-06,False,US,Sunday,Sunday
+111,New York City Marathon,2022-11-06,False,US,Sunday,Sunday
+112,Election Day,2022-11-08,False,US,Tuesday,Tuesday
+113,Marine Corps Birthday,2022-11-10,False,US,Thursday,Thursday
+114,Veterans Day,2022-11-11,True,US,Friday,Friday
+115,Thanksgiving Day,2022-11-24,True,US,Thursday,Thursday
+116,Black Friday,2022-11-25,False,US,Friday,Friday
+117,First Sunday of Advent,2022-11-27,False,US,Sunday,Sunday
+118,Cyber Monday,2022-11-28,False,US,Monday,Monday
+119,Saint Nicholas' Day,2022-12-06,False,US,Tuesday,Tuesday
+120,Pearl Harbor Remembrance Day,2022-12-07,False,US,Wednesday,Wednesday
+121,Feast of the Immaculate Conception,2022-12-08,False,US,Thursday,Thursday
+122,Feast of Our Lady Guadalupe,2022-12-12,False,US,Monday,Monday
+123,National Guard Birthday,2022-12-13,False,US,Tuesday,Tuesday
+124,Bill of Rights Day,2022-12-15,False,US,Thursday,Thursday
+125,Pan American Aviation Day,2022-12-17,False,US,Saturday,Saturday
+126,Wright Brothers Day,2022-12-17,False,US,Saturday,Saturday
+127,Hanukkah,2022-12-19,False,US,Monday,Monday
+128,Second Day of Hanukkah,2022-12-20,False,US,Tuesday,Tuesday
+129,December Solstice,2022-12-21,False,US,Wednesday,Wednesday
+130,Third Day of Hanukkah,2022-12-21,False,US,Wednesday,Wednesday
+131,Fourth Day of Hanukkah,2022-12-22,False,US,Thursday,Thursday
+132,Fifth Day of Hanukkah,2022-12-23,False,US,Friday,Friday
+133,Christmas Eve,2022-12-24,False,US,Saturday,Saturday
+134,Sixth Day of Hanukkah,2022-12-24,False,US,Saturday,Saturday
+135,Seventh Day of Hanukkah,2022-12-25,False,US,Sunday,Sunday
+136,Christmas Day,2022-12-25,True,US,Sunday,Monday
+137,Eighth Day of Hanukkah,2022-12-26,False,US,Monday,Monday
+138,Kwanzaa,2022-12-26,False,US,Monday,Monday
+139,Second Day of Kwanzaa,2022-12-27,False,US,Tuesday,Tuesday
+140,Third Day of Kwanzaa,2022-12-28,False,US,Wednesday,Wednesday
+141,Fourth Day of Kwanzaa,2022-12-29,False,US,Thursday,Thursday
+142,Fifth Day of Kwanzaa,2022-12-30,False,US,Friday,Friday
+143,New Year's Eve,2022-12-31,False,US,Saturday,Saturday
+144,Sixth Day of Kwanzaa,2022-12-31,False,US,Saturday,Saturday
